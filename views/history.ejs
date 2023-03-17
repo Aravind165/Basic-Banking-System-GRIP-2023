@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+    <link rel="icon" type="image" href="./assets/media/logo.png">
+    <style>
+      body{
+        background-color:skyblue;
+      }
+  tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+  height: 50px;
+  padding: 10px;
+}
+
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  width: 80%;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  padding: 10px;
+}
+.tab{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+.hea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: cursive;
+}
+.tab a{
+  text-decoration: none;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-info text-white">
+    <div><p style="font-size:50px; color:bisque;">Spark Bank</p></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-link">
+          <a class="nav-item" href="./index"><p style="font-size:20px;color:bisque;">Home</p> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-link">
+          <a class="nav-item" href="./about"><p style="font-size:20px;color:bisque;">About</p></a>
+        </li>
+        <li class="nav-link">
+          <a class="nav-item" href="./customers"><p style="font-size:20px;color:bisque;">Customers</p></a>
+        </li>
+        <li class="nav-link">
+            <a class="nav-item" href="./history"><p style="font-size:20px;color:bisque;">History</p></a>
+          </li>
+       
+      </ul>
+    </div>
+</nav>
+    <div class="hea">
+      <h1>Transactions Log</h1>
+    </div>
+    <div class="tab">
+        
+        <table>
+            <tr >
+            <td>From</td>
+            <td>To</td>
+            <td>Amount</td>
+          </tr>
+        <% users.forEach(function(user){ %>
+            <tr>
+                <td><%= user.From_Account %></td>
+                <td><%= user.To_Account %></td>
+                <td><%= user.Amount %></td>
+                
+            </tr>
+        <% }) %>
+    </table>
+    
+    <!-- <input type="button" value="Click to see users" onclick="generateTable()" /> -->
+
+
+    </div>
+    <!-- <script>
+        function generateTable() {
+            // creates a <table> element and a <tbody> element
+            const tbl = document.createElement("table");
+            const tblBody = document.createElement("tbody");
+          
+            // creating all cells
+            for (let i = 0; i < 2; i++) {
+              // creates a table row
+              const row = document.createElement("tr");
+          
+              for (let j = 0; j < 2; j++) {
+                // Create a <td> element and a text node, make the text
+                // node the contents of the <td>, and put the <td> at
+                // the end of the table row
+                const cell = document.createElement("td");
+                const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+              }
+          
+              // add the row to the end of the table body
+              tblBody.appendChild(row);
+            }
+          
+            // put the <tbody> in the <table>
+            tbl.appendChild(tblBody);
+            // appends <table> into <body>
+            document.body.appendChild(tbl);
+            // sets the border attribute of tbl to '2'
+            tbl.setAttribute("border", "2");
+          }
+          
+    </script> -->
+</body>
+</html>

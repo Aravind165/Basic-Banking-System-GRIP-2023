@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:coral;
+        }
+        form{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-top: 15%;
+            padding: 20px;
+            width: 40%;
+            margin-left: 28%;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+   <form method = "post" action = "/transaction">
+    <table>
+        <tr>
+    <td><label>From</label></td>
+    <td><input name = "Account_Number_from" placeholder = "Enter sender's acc no"></td>
+</tr>
+     
+     <tr>
+    <td><label>To</label></td>
+    <td><input name = "Account_Number_to" placeholder = "Enter reciver's acc no"></td>
+    </tr>
+     <tr>    
+    <td><label>Amount</label></td>
+    <td><input name = "atd" placeholder = "0"></td>
+    </tr>
+</table>
+    <input type = "submit" value="send">
+   </form>
+</body>
+</html>

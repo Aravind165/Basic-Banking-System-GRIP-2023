@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Banking System</title>
+    <link rel="stylesheet" type="text/css"   href="/css/index.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+    <link rel="icon" type="image" href="./assets/media/logo.png">
+
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-info text-white">
+    <div><p style="font-size:50px; color:bisque;">Spark Bank</p></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-link">
+          <a class="nav-item" href="./index"><p style="font-size:20px;color:bisque;">Home</p> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-link">
+          <a class="nav-item" href="./about"><p style="font-size:20px;color:bisque;">About</p></a>
+        </li>
+        <li class="nav-link">
+          <a class="nav-item" href="./customers"><p style="font-size:20px;color:bisque;">Customers</p></a>
+        </li>
+        <li class="nav-link">
+          <a class="nav-item" href="./history"><p style="font-size:20px;color:bisque;">History</p></a>
+        </li>
+       
+      </ul>
+    </div>
+</nav>
+  <div class="info">
+    <h1 data-aos="fade-left"  class="wel" ><small> Welcome To</small> Spark Bank</h1>
+    <h1 data-aos="fade-right" class="easy">Easy and Secure </h1>
+    <h2 data-aos="fade-left" class="quot" >Trusted by Many People</h2>
+    
+  </div>
+  <div class="trans-btn">
+    <button data-aos="fade-up" onClick="location.href='./customers'"  style="border-radius: 15px;"><p class="tr">Make a Transaction</p></button>
+  </div>
+
+  <div class="about-info">
+    <div> Our social media handels</div>
+    <div class="links">
+      <div><a href="#" class="fa fa-google"></a></div>
+      <div><a href="#" class="fa fa-linkedin"></a></div>
+      <div><a href="#" class="fa fa-twitter"></a></div>
+      <div><a href="#" class="fa fa-instagram"></a></div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+    });
+    
+    function change(){
+      res.redirect('/about');
+    }
+
+  </script>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+</html>
