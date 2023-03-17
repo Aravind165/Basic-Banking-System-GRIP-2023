@@ -8,8 +8,8 @@ import transaction from "./Models/transaction.js";
 app.use(express.static('public'));
 app.set('view engine','ejs')
 
-mongoose.connect("mongodb+srv://pavan333:pavan333@cluster0.9lclhkc.mongodb.net/DP_DB?retryWrites=true&w=majority")
 
+mongoose.connect(process.env.DATA_URL)
 
 app.listen(3000, function() {
     console.log("Listening on 3000")
